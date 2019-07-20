@@ -9,7 +9,7 @@ class GoalsContainer extends Component {
     render() {
       return (
         <div>
-          <GoalInput addGoal={this.props.addGoal}/>
+          <GoalInput addGoal={console.log(this.props.addGoal)}/>
           {/* <Goals/> */}
         </div>
       )
