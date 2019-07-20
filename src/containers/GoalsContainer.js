@@ -10,7 +10,7 @@ class GoalsContainer extends Component {
       return (
         <div>
           <GoalInput addGoal={this.props.addGoal}/>
-          <Goals/>
+          <Goals goals={this.props.goals}/>
         </div>
       )
     }

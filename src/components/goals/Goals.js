@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Goal from './Goal';
 
 class Goals extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <ul>
+              { this.props.goals.map((goal, id) => <Goal/>) }
+            </ul>
         )
     }
 }
