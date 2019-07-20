@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import GoalInput from '../components/goals/GoalInput'
-import Goals from '../components/goals/Goals'
+// import Goals from '../components/goals/Goals'
 
 
 export default class GoalsContainer extends Component {
@@ -9,7 +9,7 @@ export default class GoalsContainer extends Component {
       return (
         <div>
           <GoalInput/>
-          <Goals/>
+          {/* <Goals/> */}
         </div>
       )
     }

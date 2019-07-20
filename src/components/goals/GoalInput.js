@@ -5,22 +5,22 @@ export default class GoalInput extends Component {
         text: ''
     }
     
-    handleChange(event){
+    handleOnChange(event){
       this.setState({
-        text: event.target.value
+        text: event.target.value,
       })
     }
     
-    handleSubmit(event){
+    handleOnSubmit(event){
       event.preventDefault();
     }
 
     render() {
         return (
             <div>
-              <form onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.text} onChange={this.handleChange}/>
-                <input type="submit"/>
+              <form onSubmit={(event) => this.handleOnSubmit}>
+                <input type="text" value={this.state.text} onChange={(event)=> this.handleOnChange(event)}/>
+                <input type="submit" value="submit"/>
               </form>
             </div>
         )
