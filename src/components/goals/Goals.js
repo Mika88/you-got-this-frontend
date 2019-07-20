@@ -5,7 +5,7 @@ class Goals extends Component {
     render() {
         return (
             <ul>
-              { this.props.goals.map((goal, id) => <Goal/>) }
+              { this.props.goals.map((goal, id) => <Goal goal={goal}/>) }
             </ul>
         )
     }

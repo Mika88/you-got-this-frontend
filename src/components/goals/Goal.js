@@ -4,6 +4,9 @@ class Goal extends Component {
   render(){
       return (
         <div>
+          <li>
+              {this.props.goal}
+          </li>
         </div>
       )
   }
