@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import StepInput from '../components/steps/StepInput';
 import { connect } from 'react-redux';
-import Steps from '../components/steps/Steps'
+import Steps from '../components/steps/Steps';
 
 
 class StepsContainer extends Component {
