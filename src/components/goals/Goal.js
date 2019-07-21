@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StepsContainer from '../../containers/StepsContainer';
 
 class Goal extends Component {
   render(){
@@ -6,6 +7,7 @@ class Goal extends Component {
         <div>
           <li>
               {this.props.goal}
+              <StepsContainer/>
           </li>
         </div>
       )
