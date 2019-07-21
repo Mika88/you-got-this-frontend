@@ -1,10 +1,10 @@
 import React from 'react';
-// import Step from './Step';
+import Step from './Step';
 
 const Steps = (props) => 
     
     <ul>
-      {/* { props.step.map((step, id) => <Step key={id} step={step}/>) } */}
+      { props.steps.map((step, id) => <Step key={id} step={step}/>) }
     </ul>
         
 export default Steps
