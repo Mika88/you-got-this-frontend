@@ -9,7 +9,7 @@ class StepsContainer extends Component {
     render() {
       return (
         <div>
-          <StepInput addGoal={this.props.addGoal}/>
+          <StepInput addStep={this.props.addStep}/>
           <Steps steps={this.props.steps}/>
         </div>
       )
