@@ -1,4 +1,6 @@
-function goalsReducer(state = [], action) {
+function goalsReducer(state = {
+  goals: [],
+  loading: false }, action) {
   switch(action.type) {
       case "ADD_GOAL":
         return [...state, action.text];
