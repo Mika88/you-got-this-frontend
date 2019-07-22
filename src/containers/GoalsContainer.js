@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoalInput from '../components/goals/GoalInput';
 import { connect } from 'react-redux';
 import Goals from '../components/goals/Goals'
-
+import {fetchGoals} from './actions/goals'
 
 class GoalsContainer extends Component {
 
@@ -20,7 +20,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-   addGoal: text => dispatch({type: 'ADD_GOAL', text}) 
+   fetchGoals: () => dispatch(fetchGoals()) 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(GoalsContainer)
