@@ -15,7 +15,7 @@ export default class GoalInput extends Component {
     
     handleOnSubmit(event){
       event.preventDefault();
-      this.props.addGoal(this.state.text);
+      // this.props.addGoal(this.state.text);
       this.setState({
           [event.target.name]: ''
       })
@@ -26,9 +26,32 @@ export default class GoalInput extends Component {
       return (
           <div>
             <form onSubmit={(event) => this.handleOnSubmit(event)}>
-              <input type="text" name="text" value={text} onChange={(event)=> this.handleOnChange(event)}/>
-              <input type="text" name="reason" value={reason} onChange={(event)=> this.handleOnChange(event)}/>
-              <input type="text" name="deadline" value={deadline} onChange={(event)=> this.handleOnChange(event)}/>
+              <label>My Goal: </label>
+              <input
+                type="text" 
+                name="text" 
+                value={text} 
+                onChange={(event)=> this.handleOnChange(event)}
+                />
+              <br/><br/>
+              <label>This Goal is Important to Me Becaouse: </label><br/>
+              <textarea
+                type="text"
+                name="reason" 
+                cols="40"
+                rows="5"
+                value={reason} 
+                onChange={(event)=> this.handleOnChange(event)}
+                />
+               <br/><br/>
+               <label>Choose a Deadline (optional) </label> 
+               <input
+                type="date" 
+                name="deadline" 
+                value={deadline} 
+                onChange={(event)=> this.handleOnChange(event)}
+               />
+               <br/><br/>
               <input type="submit" value="submit"/>
             </form>
           </div>
