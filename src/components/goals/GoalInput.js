@@ -7,6 +7,17 @@ export default class GoalInput extends Component {
         deadline : ''
     }
     
+    postGoal(){
+      fetch('http://localhost:3001/api/v1/goals', {
+        method: 'post',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(this.state) 
+      })
+        .then(res => res.json())
+        .catch(error => console.log("Error:", error))
+        .then(response => console.log("Success:", response));
+    }  
+
     handleOnChange(event){
       this.setState({
         [event.target.name] : event.target.value,
@@ -15,7 +26,7 @@ export default class GoalInput extends Component {
     
     handleOnSubmit(event){
       event.preventDefault();
-      // this.props.addGoal(this.state.text);
+      this.postGoal()
       this.setState({
           [event.target.name]: ''
       })
