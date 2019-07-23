@@ -17,7 +17,9 @@ export default class GoalInput extends Component {
       event.preventDefault();
       this.props.addGoal(this.state)
       this.setState({
-          [event.target.name]: ''
+          text: '',
+          reason: '',
+          deadline: ''
       })
     }
 
