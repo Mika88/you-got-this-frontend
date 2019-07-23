@@ -1,17 +1,9 @@
-function goalsReducer(state = {
-  goals: [],
-  }, action) {
+function goalsReducer(state = [], action) {
     switch(action.type) {
       case 'FETCH_GOALS':
-        return {
-          ...state,
-            goals: action.goals
-          }
+        return action.goals;
       case 'ADD_GOAL':
-        return {
-          ...state,
-          goals: [...state.goals, action.goal]
-        }
+        return [...state, action.goal ]
       default:
         return state;
       }

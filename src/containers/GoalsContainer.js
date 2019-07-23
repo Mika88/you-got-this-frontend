@@ -20,7 +20,7 @@ class GoalsContainer extends Component {
 }
 
   const mapStateToProps = (state) => {
-    return { goals: state.goals.goals }
+    return { goals: state.goals }
   }
 
   const mapDispatchToProps = (dispatch) => ({
