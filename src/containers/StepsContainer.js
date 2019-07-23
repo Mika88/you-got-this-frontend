@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StepInput from '../components/steps/StepInput';
 import { connect } from 'react-redux';
 import Steps from '../components/steps/Steps';
-
+import { addStep } from '../actions/steps'
 
 class StepsContainer extends Component {
 
@@ -20,7 +20,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-   addStep: text => dispatch({type: 'ADD_STEP', text}) 
+   addStep: data => dispatch(addStep(data)) 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(StepsContainer)
