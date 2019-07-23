@@ -8,10 +8,6 @@ class GoalsContainer extends Component {
   componentDidMount() {
     this.props.fetchGoals()
   }
-
-  componentDidUpdate() {
-    this.props.fetchGoals()
-  }
   
   render() {
     return (
@@ -29,7 +25,7 @@ class GoalsContainer extends Component {
 
   const mapDispatchToProps = (dispatch) => ({
     fetchGoals: () => dispatch(fetchGoals()),
-    addGoal: () => dispatch(addGoal())
+    addGoal: data => dispatch(addGoal(data))
   })
 
 export default connect(mapStateToProps, mapDispatchToProps)(GoalsContainer)

@@ -13,6 +13,12 @@ function goalsReducer(state = {
             loading: false,
             goals: action.goals
           }
+      case 'ADD_GOAL':
+        return {
+          ...state,
+          loading: false,
+          goals: [...state.goals, action.goal]
+        }
       default:
         return state;
       }

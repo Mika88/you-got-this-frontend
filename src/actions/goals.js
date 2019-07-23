@@ -1,13 +1,5 @@
 const apiUrl = 'http://localhost:3001/api/v1/goals'
 
-const postGoal = () => {
-  fetch(apiUrl, {
-      method: 'post',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(this.state) 
-    })
-}
-
 export function fetchGoals() {
   return (dispatch) => {
     dispatch({ type: 'LOADING' });
@@ -17,10 +9,14 @@ export function fetchGoals() {
   };
 }
 
-export function addGoal() {
+export function addGoal(data) {
   return (dispatch) => {
     dispatch({ type: 'LOADING'});
-    return postGoal()
+    return fetch(apiUrl, {
+      method: 'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data) 
+    })
     .then(res => res.json())
     .then(goal => dispatch({ type: 'ADD_GOAL', goal}))
   } 
