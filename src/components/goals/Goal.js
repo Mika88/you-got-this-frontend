@@ -4,7 +4,9 @@ import StepsContainer from '../../containers/StepsContainer';
 const  Goal = (props) => 
     <div>
         <li>
-            {props.goal}
+            <h3>{props.goal.text}</h3>
+            <strong>This is important to me because {props.goal.reason}</strong>
+            <h4>deadline: {props.goal.deadline}</h4>
             <StepsContainer/>
         </li>
     </div>

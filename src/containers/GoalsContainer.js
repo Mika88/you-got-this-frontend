@@ -9,6 +9,10 @@ class GoalsContainer extends Component {
     this.props.fetchGoals()
   }
 
+  componentDidUpdate() {
+    this.props.fetchGoals()
+  }
+  
   render() {
     return (
       <div>
