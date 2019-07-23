@@ -7,11 +7,11 @@ function stepsReducer(state = {
         ...state, 
           loading: true
         }
-      case 'ADD_GOAL':
+      case 'ADD_STEP':
         return {
           ...state,
           loading: false,
-          sreps: [...state.steps, action.step]
+          steps: [...state.steps, action.step]
         }
       default:
         return state;
