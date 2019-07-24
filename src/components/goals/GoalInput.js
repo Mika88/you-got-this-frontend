@@ -36,7 +36,7 @@ export default class GoalInput extends Component {
                 onChange={(event)=> this.handleOnChange(event)}
                 />
               <br/><br/>
-              <label>This Goal is Important to Me Because: </label><br/>
+              <label>This Goal is Important to Me Because (optional) </label><br/>
               <textarea
                 type="text"
                 name="reason" 
@@ -46,7 +46,7 @@ export default class GoalInput extends Component {
                 onChange={(event)=> this.handleOnChange(event)}
                 />
                <br/><br/>
-               <label>Choose a Deadline (optional) </label> 
+               <label>Choose a Deadline (optional)</label> 
                <input
                 type="date" 
                 name="deadline" 
