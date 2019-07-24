@@ -13,7 +13,7 @@ export default class StepInput extends Component {
     
     handleOnSubmit(event){
       event.preventDefault();
-      this.props.addStep(this.state.text);
+      this.props.addStep({text: this.state.text, goal_id: this.props.goalId});
       this.setState({
           text: ''
       })
