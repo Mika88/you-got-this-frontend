@@ -23,8 +23,15 @@ export default class StepInput extends Component {
         return (
             <div>
               <form onSubmit={(event) => this.handleOnSubmit(event)}>
-                <input type="text" value={this.state.text} onChange={(event)=> this.handleOnChange(event)}/>
-                <input type="submit" value="submit"/>
+                <input 
+                  type="text" 
+                  value={this.state.text} 
+                  onChange={(event)=> this.handleOnChange(event)}
+                  />
+                <input 
+                  type="submit" 
+                  value="submit"
+                  />
               </form>
             </div>
         )
