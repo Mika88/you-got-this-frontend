@@ -9,6 +9,6 @@ export function addStep(data) {
       body: JSON.stringify(data) 
     })
     .then(res => res.json())
-    .then(step => console.log(step))
+    .then(step => dispatch({type: 'ADD_STEP', step}))
   } 
 }
