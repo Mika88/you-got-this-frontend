@@ -3,9 +3,9 @@ import Step from './Step';
 
 const Steps = (props) => 
   <div>
-    <h4>Steps: </h4>
-      <ul>
+    <h4>{props.steps.length > 0 ? "Steps: " : ""}</h4>
+      <ol>
         { props.steps.map(step => <Step key={step.id} step={step}/>) }
-      </ul>
+      </ol>
   </div>
 export default Steps
