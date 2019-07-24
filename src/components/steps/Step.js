@@ -3,7 +3,7 @@ import React from 'react';
 const  Step = (props) => 
     <div>
         <li>
-            {props.step}
+            {props.step.text}
         </li>
     </div>
 
