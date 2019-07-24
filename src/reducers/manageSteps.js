@@ -1,18 +1,8 @@
-function stepsReducer(state = {
-  steps: [],
-  loading: false }, action) {
+function stepsReducer(state = [], action) {
     switch(action.type) {
-      case 'LOADING':
-      return {
-        ...state, 
-          loading: true
-        }
       case 'ADD_STEP':
-        return {
-          ...state,
-          loading: false,
-          steps: [...state.steps, action.step]
-        }
+        return [...state, action.step]
+        
       default:
         return state;
       }
