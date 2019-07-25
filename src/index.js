@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose} from 'redux';
 import rootReducer from './reducers/index';
 import thunk from 'redux-thunk';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 let store = createStore(
     rootReducer,
@@ -19,7 +19,7 @@ let store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Route path="/" component={App} />
+      <App/>
     </Router>,
   </Provider>, 
   
