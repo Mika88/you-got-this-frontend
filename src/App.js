@@ -1,11 +1,13 @@
 import React from 'react';
-import GoalsContainer from './containers/GoalsContainer'
-
+import GoalsContainer from './containers/GoalsContainer';
+import { BrowserRouter, Route } from 'react-router-dom';
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        < GoalsContainer />
+        <BrowserRouter>
+          <Route exact path="/goals" render={routerProps => < GoalsContainer {...routerProps} /> }/>
+        </BrowserRouter>
       </div>
     );
   }
