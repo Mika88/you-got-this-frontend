@@ -2,10 +2,10 @@ import React from 'react';
 import Goal from './Goal';
 import { Link } from 'react-router-dom';
 
-const Goals = (props) =>
+const Goals = ({goals, match}) =>
     
     <ul>
-        { props.goals.map(goal => <li key={goal.id}><Link to={`/goals/${goal.id}`}>{goal.text}</Link></li>) }
+        { goals.map(goal => <li key={goal.id}><Link to={`${match.url}/${goal.id}`}>{goal.text}</Link></li>) }
     </ul>
         
 export default Goals
