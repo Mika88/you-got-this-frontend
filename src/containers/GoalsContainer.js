@@ -13,6 +13,7 @@ class GoalsContainer extends Component {
   render() {
     return (
       <div>
+        <Goals goals={this.props.goals}/>
         {/* <Route exact path="/goals" render={routerProps =>  
           <Goals {...routerProps} goals={this.props.goals}/>  
          } />
