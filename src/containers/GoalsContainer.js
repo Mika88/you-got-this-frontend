@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Goals from '../components/goals/Goals'
 import {fetchGoals, addGoal} from '../actions/goals'
 import { Route } from 'react-router-dom'
-
+import Goal from '../components/goals/Goal'
 class GoalsContainer extends Component {
   componentDidMount() {
     this.props.fetchGoals()
@@ -13,9 +13,11 @@ class GoalsContainer extends Component {
   render() {
     return (
       <div>
-        <Route exact path="/goals" render={routerProps => 
+        <Route exact path={this.props.match.path} render={routerProps => 
           < Goals {...routerProps} goals={this.props.goals}/> }/>
-        <Route exact path="/goals/new"  render={routerProps => 
+        <Route path={`${this.props.match.path}/:goalId`} render={routerProps => 
+          < Goal {...routerProps} goals={this.props.goals}/> }/>
+        <Route exact path={`${this.props.match.path}/new`}  render={routerProps => 
           <GoalInput {...routerProps} addGoal={this.props.addGoal}/>
         } /> 
       </div>
