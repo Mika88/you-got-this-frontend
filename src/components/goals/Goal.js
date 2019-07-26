@@ -2,7 +2,9 @@ import React from 'react';
 import StepsContainer from '../../containers/StepsContainer';
 
 function Goal({match, goals}){
+    
     const goal = goals.find(goal => goal.id == match.params.goalId)
+
     if(goal){
         return (
         <div>
