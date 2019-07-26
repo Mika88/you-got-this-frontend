@@ -6,6 +6,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <BrowserRouter>
+          <Route exact path="/" render={() => <h1>Home</h1>}/>
           <Route exact path="/goals" render={routerProps => < GoalsContainer {...routerProps} /> }/>
         </BrowserRouter>
       </div>
