@@ -1,13 +1,13 @@
 import React from 'react';
 import EventContainer from '../../containers/EventsContainer';
 
-function Step(props){
+function Step({step}){
   return (
     <div>
         <li>
-            {props.step.text}
+            {step.text}
         </li>
-        <EventContainer/>
+        <EventContainer stepId={step.id}/>
     </div>
   )
 }
