@@ -4,7 +4,7 @@ import EventContainer from '../../containers/EventsContainer';
 function Step({step}){
   return (
     <div>
-        <h1><li>{step.text}</li></h1>
+        <h2><li>{step.text}</li></h2>
         <EventContainer stepId={step.id}/>
     </div>
   )

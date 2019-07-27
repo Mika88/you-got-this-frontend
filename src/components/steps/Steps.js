@@ -4,7 +4,7 @@ import Step from './Step';
 function Steps({steps}){
   return (
   <div>
-    <h4>{steps.length > 0 ? "Steps: " : ""}</h4>
+    <h2>{steps.length > 0 ? "Steps: " : ""}</h2>
       <ol>
         { steps.map(step => <Step key={step.id} step={step}/>) }
       </ol>

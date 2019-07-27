@@ -8,10 +8,11 @@ function Goal({match, goals}){
     if(goal){
         return (
         <div>
-            <h3>{goal.text}</h3>
+            <h1>{goal.text}</h1>
             <strong>{ goal.reason ? "This is important to me because " : ""} {goal.reason}</strong>
             <h4>{ goal.deadline ? "Deadline: " : ""} {goal.deadline}</h4>
             <StepsContainer goalId={goal.id}/>
+           
         </div>
         )
     }else{
