@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DateTimePicker from 'react-datetime-picker';
 import AddToCalendar from 'react-add-to-calendar';
 import 'react-add-to-calendar/dist/react-add-to-calendar.css'
+import './event.css'
 export default class EventInput extends Component {
     state={
         done: false,
