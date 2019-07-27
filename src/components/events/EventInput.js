@@ -21,18 +21,18 @@ export default class EventInput extends Component {
     render() {
         let icon = { 'calendar-plus-o': 'left' };
         return (
-           <div>
-               <span>
-             <DateTimePicker
+          <div>
+            <span>
+              <DateTimePicker
                 onChange={this.onChange}
                 value={this.state.date}
-              />
+               />
               <AddToCalendar 
                 event={this.state.event}
                 buttonTemplate={icon}
                 />
-                </span>
-           </div>
+            </span>
+          </div>
         )
     }
 }
