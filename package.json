@@ -5,6 +5,7 @@
   "dependencies": {
     "cuid": "^2.1.6",
     "react": "^16.8.6",
+    "react-datetime-picker": "^2.7.1",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
