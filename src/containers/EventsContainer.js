@@ -10,10 +10,13 @@ class EventsContainer extends Component {
   }
 
   render() {
+
+    const associatedEvents = this.props.events.filter( event => event.step.id === this.props.step.id)
+
     return (
       <div>
         <EventInput addEvent={this.props.addEvent} step={this.props.step}/>
-        <Events stepId={this.props.step.id} />
+        <Events stepId={this.props.step.id} events={associatedEvents}/>
       </div>
     )
   }
