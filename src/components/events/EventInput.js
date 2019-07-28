@@ -8,15 +8,19 @@ export default class EventInput extends Component {
         done: false,
         date: new Date(),
         event: {
-            title: 'Sample Event',
-            description: 'This is the sample event provided as an example only',
-            location: 'Portland, OR',
-            startTime: '2016-09-16T20:15:00-04:00',
-            endTime: '2016-09-16T21:45:00-04:00'
+            title: '',
+            startTime: '',
           }
     }
 
-    onChange = date => this.setState({ date }, () => console.log(this.state))  
+    onChange = date => this.setState({ 
+      date: date,
+      event: {
+        ...this.state.event, 
+        title: this.props.step.text,
+        startTime: date
+      }
+     }, () => console.log(this.state))  
     
     render() {
         let icon = { 'calendar-plus-o': 'left' };
