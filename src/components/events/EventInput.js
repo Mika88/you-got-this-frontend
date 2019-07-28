@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DateTimePicker from 'react-datetime-picker';
 import AddToCalendar from 'react-add-to-calendar';
+import moment from 'moment'
 import 'react-add-to-calendar/dist/react-add-to-calendar.css';
 import './event.css';
 
@@ -15,6 +16,10 @@ export default class EventInput extends Component {
             endTime: new Date()
           }
     }
+    
+    eventTimeFormat(){
+      return moment(this.state.date).format('MMMM Do YYYY, h:mm a')
+    }
 
     onChange = date => this.setState({ 
       date: date, 
@@ -27,7 +32,7 @@ export default class EventInput extends Component {
     
      handleSubmit(event){
       event.preventDefault();
-      this.props.addEvent({time: this.state.date.toString(), step_id: this.props.step.id})
+      this.props.addEvent({time: this.eventTimeFormat(), step_id: this.props.step.id})
       this.setState({
         date: new Date(),
         event: {
