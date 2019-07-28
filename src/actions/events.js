@@ -1,5 +1,14 @@
 const apiUrl = 'http://localhost:3001/api/v1/events'
 
+export function fetchEvents() {
+    return (dispatch) => {
+      dispatch({ type: 'LOADING' });
+      return fetch(apiUrl)
+        .then(response => response.json())
+        .then(events => dispatch({ type: 'FETCH_EVENTS', events }));
+    };
+  }
+
 export function addEvent(data) {
     return (dispatch) => {
       dispatch({ type: 'LOADING'});
