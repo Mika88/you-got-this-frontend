@@ -21,3 +21,16 @@ export function addEvent(data) {
       .then(event => dispatch({type: 'ADD_EVENT', event}))
     } 
   }
+
+  export function deleteEvent(data, id) {
+    return (dispatch) => {
+      dispatch({ type: 'LOADING'});
+      return fetch(apiUrl + "/:" + id, {
+        method: 'DELETE',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data) 
+      })
+      .then(res => res.json())
+      .then(event => dispatch({type: 'DELETE_EVENT', event}))
+    } 
+  }
