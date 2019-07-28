@@ -10,7 +10,7 @@ class EventsContainer extends Component {
     
     return (
       <div>
-        <EventInput step={this.props.step}/>
+        <EventInput addEvent={this.props.addEvent} step={this.props.step}/>
         <Events stepId={this.props.step.id}/>
       </div>
     )

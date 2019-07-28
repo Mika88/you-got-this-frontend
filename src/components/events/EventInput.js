@@ -27,6 +27,7 @@ export default class EventInput extends Component {
     
      handleSubmit(event){
       event.preventDefault();
+      this.props.addEvent({time: this.state.date.toString(), step_id: this.props.step.id})
       this.setState({
         date: new Date(),
         event: {
