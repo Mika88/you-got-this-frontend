@@ -8,8 +8,8 @@ class EventsContainer extends Component {
     
     return (
       <div>
-        <EventInput eventlId={this.props.eventId}/>
-        <Events eventId={this.props.eventId}/>
+        <EventInput step={this.props.step}/>
+        <Events stepId={this.props.step.id}/>
       </div>
     )
   }

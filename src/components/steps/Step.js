@@ -5,7 +5,7 @@ function Step({step}){
   return (
     <div>
         <h2><li>{step.text}</li></h2>
-        <EventContainer stepId={step.id}/>
+        <EventContainer step={step}/>
     </div>
   )
 }
