@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import EventInput from '../components/events/EventInput';
 import Events from '../components/events/Events';
 import { connect } from 'react-redux';
-import { addEvent } from '../actions/steps'
+import { addEvent } from '../actions/events'
 
 class EventsContainer extends Component {
   
@@ -18,7 +18,7 @@ class EventsContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { steps: state.steps }
+  return { events: state.events }
 }
 
 const mapDispatchToProps = (dispatch) => ({
