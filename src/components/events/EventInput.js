@@ -6,7 +6,6 @@ import './event.css';
 
 export default class EventInput extends Component {
     state={
-        done: false,
         date: new Date(),
         event: {
             title: this.props.step.text,
@@ -29,8 +28,7 @@ export default class EventInput extends Component {
      handleSubmit(event){
       event.preventDefault();
       this.setState({
-        date: new Date(), 
-        done: false,
+        date: new Date(),
         event: {
           ...this.state.event, 
           startTime: new Date(),
