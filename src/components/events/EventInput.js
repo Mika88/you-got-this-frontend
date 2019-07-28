@@ -9,29 +9,41 @@ export default class EventInput extends Component {
         done: false,
         date: new Date(),
         event: {
-            title: '',
+            title: this.props.step.text,
             description: '',
             location: '',
-            startTime: '',
-            endTime: ''
+            startTime: new Date(),
+            endTime: new Date()
           }
     }
 
     onChange = date => this.setState({ 
-      date: date,
+      date: date, 
       event: {
-        ...this.state.event, 
-        title: this.props.step.text,
-        startTime: date,
-        endTime: date
+        ...this.state.event,
+          startTime: date,
+          endTime: date
       }
      }, () => console.log(this.state))  
     
+     handleSubmit(event){
+      event.preventDefault();
+      this.setState({
+        date: new Date(), 
+        done: false,
+        event: {
+          ...this.state.event, 
+          startTime: new Date(),
+          endTime: new Date()
+        }
+      })
+    }
+
     render() {
         let icon = { 'calendar-plus-o': 'left' };
         return (
           <div>
-            <span>
+            <form onSubmit={(event) => this.handleSubmit(event)}>
               <DateTimePicker
                 onChange={this.onChange}
                 value={this.state.date}
@@ -40,7 +52,8 @@ export default class EventInput extends Component {
                 event={this.state.event}
                 buttonTemplate={icon}
                 />
-            </span>
+               <input type="submit" value="submit"/>
+            </form>
           </div>
         )
     }
