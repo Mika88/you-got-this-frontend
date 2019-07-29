@@ -9,8 +9,7 @@ function Steps(props){
   <div>
     <h2>{steps.length > 0 ? "Steps: " : ""}</h2>
         { steps.map(step =>
-      
-      <ol> 
+      <ol key ={step.id}> 
         <Step key={step.id} step={step} goalId={goalId} deleteStep={deleteStep}/>
       </ol>
         )}

@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Event(props){
+class Event extends Component {
   
-  const {event, deleteEvent, stepId, setDone} = props
+  state={
+    done: false
+  }
+  
+  handleChecked(e){
+    this.setState({done: e.target.checked}) 
+  }
 
-  return (
-    <div>
-      <li>
-        <strong>
-          {event.time}
-          <button onClick={() => deleteEvent({time: event.time, step_id: stepId}, event.id)}>X</button>
-        </strong>
-      </li>
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        <li key={this.props.event.id}>
+        <form>
+            <input
+              type="checkbox"
+              checked={this.state.done}
+              onChange={e => this.handleChecked(e)}
+            />
+          <label>
+            {this.props.event.time}
+          </label>
+        </form>
+        <button onClick={() => this.props.deleteEvent({time: this.props.event.time, step_id: this.props.stepId}, this.props.event.id)}>X</button>
+        </li>
+      </div>
+    )}
 }
 export default Event;
