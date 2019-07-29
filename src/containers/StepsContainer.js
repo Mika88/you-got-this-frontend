@@ -11,8 +11,13 @@ class StepsContainer extends Component {
 
   render() {
     
-    const associatedSteps = this.props.steps.filter( step => step.goal.id === this.props.goalId)
-
+    const associatedSteps = this.props.steps.filter(step => {
+      if(step.goal && step.goal.id === this.props.goalId){
+        return true
+       } 
+      return false
+     })
+     
     return (
       <div>
         <StepInput addStep={this.props.addStep} goalId={this.props.goalId}/>
