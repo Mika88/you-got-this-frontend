@@ -2,7 +2,7 @@ import React from 'react';
 
 function Event(props){
   
-  const {event, deleteEvent, stepId} = props
+  const {event, deleteEvent, stepId, setDone} = props
 
   return (
     <div>
