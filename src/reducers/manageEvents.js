@@ -5,7 +5,7 @@ function eventsReducer(state = [], action) {
       case 'FETCH_EVENTS':
         return action.events
       case 'DELETE_EVENT':
-        return {...state.filter(event => event.id !== action.id)}
+        return [...state.filter(event => event.id !== action.event.id)]
       default:
         return state;
       }

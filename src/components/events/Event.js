@@ -6,7 +6,7 @@ function Event(props){
 
   return (
     <div>
-        <button onClick={() => deleteEvent({time: event.time, step_id:stepId}, event.id)}>X</button>
+        <button onClick={() => deleteEvent({time: event.time, step_id: stepId}, event.id)}>X</button>
         <h4><li>{event.time}</li></h4>
     </div>
   )
