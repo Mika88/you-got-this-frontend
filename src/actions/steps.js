@@ -22,3 +22,15 @@ export function addStep(data) {
   } 
 }
 
+export function deleteStep(data, id) {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING'});
+    return fetch(apiUrl + "/" + id, {
+      method: 'DELETE',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data) 
+    })
+    .then(res => res.json())
+    .then(step => dispatch({type: 'DELETE_STEP', step}))
+  } 
+}

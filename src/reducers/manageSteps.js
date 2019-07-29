@@ -4,6 +4,8 @@ function stepsReducer(state = [], action) {
         return [...state, action.step]
       case 'FETCH_STEPS':
         return action.steps
+      case 'DELETE_STEP':
+        return [...state.filter(step => step.id !== action.step.id)]
       default:
         return state;
       }
