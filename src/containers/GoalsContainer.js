@@ -5,7 +5,6 @@ import Goals from '../components/goals/Goals'
 import {fetchGoals, addGoal, deleteGoal} from '../actions/goals'
 import { Route } from 'react-router-dom'
 import Goal from '../components/goals/Goal'
-import { thisExpression } from '@babel/types';
 
 class GoalsContainer extends Component {
   componentDidMount() {
@@ -16,7 +15,7 @@ class GoalsContainer extends Component {
     return (
       <div>
         <Route exact path={this.props.match.path} render={routerProps => 
-          < Goals {...routerProps} goals={this.props.goals} deleteGoal={thisExpression.props.deleteGoal}/> }/>
+          < Goals {...routerProps} goals={this.props.goals} deleteGoal={this.props.deleteGoal}/> }/>
         <Route path={`${this.props.match.path}/:goalId`} render={routerProps => 
           < Goal {...routerProps} goals={this.props.goals}/> }/>
         <Route exact path={`${this.props.match.path}/new`}  render={routerProps => 
