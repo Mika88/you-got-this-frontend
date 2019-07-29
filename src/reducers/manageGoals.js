@@ -4,6 +4,8 @@ function goalsReducer(state = [], action) {
         return action.goals;
       case 'ADD_GOAL':
         return [...state, action.goal ]
+      case 'DELETE_GOAL':
+        return [...state.filter(goal => goal.id !== action.goal.id)]
       default:
         return state;
       }

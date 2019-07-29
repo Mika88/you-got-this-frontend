@@ -21,3 +21,16 @@ export function addGoal(data) {
     .then(goal => dispatch({ type: 'ADD_GOAL', goal}))
   } 
 }
+
+export function deleteGoal(data, id) {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING'});
+    return fetch(apiUrl + "/" + id, {
+      method: 'DELETE',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data) 
+    })
+    .then(res => res.json())
+    .then(goal => dispatch({type: 'DELETE_GOAL', goal}))
+  } 
+}
