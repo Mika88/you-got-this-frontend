@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 class Event extends Component {
   
-  state={
+  state= {
     done: false
   }
-  
-  handleChecked(e){
-    this.setState({done: e.target.checked}) 
-  }
 
+  handleChecked(e){
+    this.setState({done: e.target.checked}, () => 
+    this.props.setDone(this.state.done)
+    )
+  }
+  
   render() {
     return (
       <div>
