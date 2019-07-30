@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 
 export default class GoalInput extends Component {
     state = {
         text: '',
         reason: '',
-        deadline : ''
+        deadline : '',
+        redirect: false
     } 
+    
+    setRedirect = () => {
+      this.setState({
+        redirect: true
+      })
+    }
+
+    renderRedirect = () => {
+      if (this.state.redirect) {
+        return <Redirect to='/goals' />
+      }
+    }
 
     handleOnChange(event){
       this.setState({
@@ -21,12 +35,14 @@ export default class GoalInput extends Component {
           reason: '',
           deadline: ''
       })
+      this.setRedirect()
     }
 
     render() {
       const { text, reason, deadline } = this.state
       return (
           <div>
+            {this.renderRedirect()}
             <form onSubmit={(event) => this.handleOnSubmit(event)}>
               <label>My Goal: </label>
               <input

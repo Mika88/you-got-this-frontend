@@ -30,7 +30,7 @@ class GoalsContainer extends Component {
         <Route path={`${this.props.match.path}/:goalId`} render={routerProps => 
           < Goal {...routerProps} goals={this.props.goals} deadlineTracker={this.deadlineTracker} deadlineFormat={this.deadlineFormat}/> }/>
         <Route exact path={`${this.props.match.path}/new`}  render={routerProps => 
-          <GoalInput {...routerProps} addGoal={this.props.addGoal}/>
+          <GoalInput {...routerProps} addGoal={this.props.addGoal} goals={this.props.goals}/>
         } /> 
       </div>
     )
