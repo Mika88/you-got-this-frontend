@@ -7,15 +7,19 @@ function Goals(props){
 
   return (
     <div>
-    <ul>
         { goals.map(goal => 
-        <li 
-          key={goal.id}><Link to={`${match.url}/${goal.id}`}>{goal.text}</Link>
-          <button onClick={() => deleteGoal({text: goal.text, reason: goal.reason, deadline: goal.deadline}, goal.id)}>X</button>
-        </li>
+        <div>
+          <button 
+            className="btn btn-outline-danger btn-sm" 
+            onClick={() => 
+              deleteGoal({text: goal.text, reason: goal.reason, deadline: goal.deadline}, goal.id)}
+               >X</button>
+          <strong><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
+          <br /><br />
+        </div>
       )}
-    </ul>
   </div>
   )
 }
 export default Goals
+
