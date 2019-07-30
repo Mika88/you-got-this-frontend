@@ -10,11 +10,11 @@ function Goals(props){
         { goals.map(goal => 
         <div>
           <button 
-            className="btn btn-outline-danger btn-sm" 
+            className="btn-outline-primary btn-sm" 
             onClick={() => 
               deleteGoal({text: goal.text, reason: goal.reason, deadline: goal.deadline}, goal.id)}
                >X</button>
-          <strong><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
+          <strong><Link className="bg-light" to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
           <br /><br />
         </div>
       )}
