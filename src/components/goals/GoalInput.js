@@ -48,7 +48,7 @@ export default class GoalInput extends Component {
                <br/><br/>
                <label>Choose a Deadline (optional)</label> 
                <input
-                type="date" 
+                type="date"                 
                 name="deadline" 
                 value={deadline} 
                 onChange={(event)=> this.handleOnChange(event)}
