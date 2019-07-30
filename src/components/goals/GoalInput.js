@@ -70,7 +70,7 @@ export default class GoalInput extends Component {
                 onChange={(event)=> this.handleOnChange(event)}
                />
                <br/><br/>
-              <input type="submit" value="submit"/>
+              <input type="submit" className="btn btn-primary" value="submit"/>
             </form>
           </div>
       )
