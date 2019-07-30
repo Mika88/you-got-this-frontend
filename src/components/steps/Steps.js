@@ -8,11 +8,11 @@ function Steps(props){
   return (
   <div>
     <h2>{steps.length > 0 ? "Steps: " : ""}</h2>
-        { steps.map(step =>
-      <ol key ={step.id}> 
-        <Step key={step.id} step={step} goalId={goalId} deleteStep={deleteStep}/>
-      </ol>
-        )}
+    <ol>
+        { steps.map(step => 
+        <li key={step.id}><Step step={step} goalId={goalId} deleteStep={deleteStep}/></li>
+         )}
+    </ol>
   </div>
   )
 }
