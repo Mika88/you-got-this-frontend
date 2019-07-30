@@ -7,6 +7,7 @@ import { createStore, applyMiddleware, compose} from 'redux';
 import rootReducer from './reducers/index';
 import thunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 let store = createStore(
     rootReducer,

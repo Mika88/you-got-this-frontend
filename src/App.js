@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <Navbar/>
         <Route path="/goals" render={routerProps => <GoalsContainer {...routerProps}/>}/>
         <Route exact path="/" render={() => <h1>Home</h1>}/>
