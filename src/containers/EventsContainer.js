@@ -6,16 +6,6 @@ import { addEvent, fetchEvents, deleteEvent, updateEvent } from '../actions/even
 
 class EventsContainer extends Component {
   
-  state={
-    done: false
-  }
-
-  setDone = (boolean) => {
-    this.setState({
-      done: boolean
-    })
-  }
-  
   componentDidMount() {
     this.props.fetchEvents()
   }
@@ -27,7 +17,7 @@ class EventsContainer extends Component {
     return (
       <div>
         <EventInput addEvent={this.props.addEvent} step={this.props.step} />
-        <Events stepId={this.props.step.id} events={associatedEvents} deleteEvent={this.props.deleteEvent} setDone={this.setDone} updateEvent={this.props.updateEvent} />
+        <Events stepId={this.props.step.id} events={associatedEvents} deleteEvent={this.props.deleteEvent} updateEvent={this.props.updateEvent} />
       </div>
     )
   }

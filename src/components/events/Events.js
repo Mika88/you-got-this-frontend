@@ -3,12 +3,12 @@ import Event from './Event';
 
 function Events(props){
   
-    const { events, deleteEvent, stepId, setDone, updateEvent } = props
+    const { events, deleteEvent, stepId, updateEvent } = props
 
     return (
       <div>
         <ul>
-          { events.map(event=> <Event key={event.id} event={event} stepId={stepId} deleteEvent={deleteEvent} setDone={setDone} updateEvent={updateEvent} />) }
+          { events.map(event=> <Event key={event.id} event={event} stepId={stepId} deleteEvent={deleteEvent} updateEvent={updateEvent} />) }
         </ul>
       </div>
     )
