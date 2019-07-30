@@ -44,6 +44,6 @@ export function addEvent(data) {
         body: JSON.stringify(data) 
       })
       .then(res => res.json())
-      .then(event => dispatch({type: 'UPDATE_EVENT', event}))
+      .then(event =>  dispatch({type: 'UPDATE_EVENT', event}))
     } 
   }

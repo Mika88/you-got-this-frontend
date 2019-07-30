@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import EventInput from '../components/events/EventInput';
 import Events from '../components/events/Events';
 import { connect } from 'react-redux';
-import { addEvent, fetchEvents, deleteEvent } from '../actions/events';
+import { addEvent, fetchEvents, deleteEvent, updateEvent } from '../actions/events';
 
 class EventsContainer extends Component {
   
@@ -26,8 +26,8 @@ class EventsContainer extends Component {
  
     return (
       <div>
-        <EventInput addEvent={this.props.addEvent} step={this.props.step}/>
-        <Events stepId={this.props.step.id} events={associatedEvents} deleteEvent={this.props.deleteEvent} setDone={this.setDone}/>
+        <EventInput addEvent={this.props.addEvent} step={this.props.step} />
+        <Events stepId={this.props.step.id} events={associatedEvents} deleteEvent={this.props.deleteEvent} setDone={this.setDone} updateEvent={this.props.updateEvent} />
       </div>
     )
   }
@@ -40,7 +40,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
    addEvent: data => dispatch(addEvent(data)),
    fetchEvents: () => dispatch(fetchEvents()),
-   deleteEvent: (data, id) => dispatch(deleteEvent(data, id))
+   deleteEvent: (data, id) => dispatch(deleteEvent(data, id)),
+   updateEvent: (data, id) => dispatch(updateEvent(data, id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventsContainer)

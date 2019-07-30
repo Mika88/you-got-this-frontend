@@ -28,7 +28,7 @@ export default class EventInput extends Component {
           startTime: date,
           endTime: date
       }
-     }, () => console.log(this.state))  
+     })  
     
      handleSubmit(event){
       event.preventDefault();

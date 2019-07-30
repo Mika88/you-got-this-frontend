@@ -1,5 +1,4 @@
 function eventsReducer(state = [], action) {
-  console.log(state)
     switch(action.type) {
       case 'ADD_EVENT':
         return [...state, action.event]
@@ -9,8 +8,10 @@ function eventsReducer(state = [], action) {
         return [...state.filter(event => event.id !== action.event.id)]
       case 'UPDATE_EVENT':
         const event = state.find(event => event.id === action.event.id)
-        const index = state.indexof(event)
-        return [ ...state.splice(index, 1, action.event) ]
+        const index = state.indexOf(event)
+        const newState = [...state]
+          newState.splice(index, 1, action.event)
+        return newState
       default:
         return state;
       }
