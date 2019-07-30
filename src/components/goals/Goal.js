@@ -1,5 +1,6 @@
 import React from 'react';
 import StepsContainer from '../../containers/StepsContainer';
+import moment from 'moment'
 
 function Goal({match, goals}){
     
@@ -10,7 +11,7 @@ function Goal({match, goals}){
         <div>
             <h1>{goal.text}</h1>
             <strong>{ goal.reason ? "This is important to me because " : ""} {goal.reason}</strong>
-            <h4>{ goal.deadline ? "Deadline: " : ""} {goal.deadline}</h4>
+            <h4>{ goal.deadline ? "Deadline: " : ""} {moment(goal.deadline).format("MMM Do YYYY")}</h4>
             <StepsContainer goalId={goal.id}/>
            
         </div>
