@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StepInput from '../components/steps/StepInput';
 import { connect } from 'react-redux';
 import Steps from '../components/steps/Steps';
-import { addStep, fetchSteps, deleteStep } from '../actions/steps'
+import { addStep, fetchSteps, deleteStep, updateStep} from '../actions/steps'
 
 class StepsContainer extends Component {
   componentDidMount() {
@@ -22,7 +22,7 @@ class StepsContainer extends Component {
       <div>
         <StepInput addStep={this.props.addStep} goalId={this.props.goalId}/>
         <br /><br />
-        <Steps steps={associatedSteps} goalId={this.props.goalId} deleteStep={this.props.deleteStep}/>
+        <Steps steps={associatedSteps} goalId={this.props.goalId} deleteStep={this.props.deleteStep} updateStep={this.props.updateStep}/>
       </div>
     )
   }
@@ -35,7 +35,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
    addStep: data => dispatch(addStep(data)),
    fetchSteps: () => dispatch(fetchSteps()),
-   deleteStep: (data, id) => dispatch(deleteStep(data, id))
+   deleteStep: (data, id) => dispatch(deleteStep(data, id)),
+   updateStep: (data, id) => dispatch(updateStep(data, id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(StepsContainer)
