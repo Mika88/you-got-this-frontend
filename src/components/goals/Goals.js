@@ -6,7 +6,7 @@ function Goals(props){
   const {goals, match, deleteGoal} = props
 
   return (
-    <div>
+    <div className="goals">
         { goals.map(goal => 
         <div>
           <button 
@@ -14,7 +14,7 @@ function Goals(props){
             onClick={() => 
               deleteGoal({text: goal.text, reason: goal.reason, deadline: goal.deadline}, goal.id)}
                >X</button>
-          <strong><Link className="bg-light" to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
+          <strong><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
           <br /><br />
         </div>
       )}
