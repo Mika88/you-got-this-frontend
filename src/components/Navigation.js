@@ -4,8 +4,8 @@ import Logo from '../logo.jpg'
 
 function Navigation() {
       return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <img src={Logo} alt='logo' />
+        <nav className="navbar navbar-expand-sm navbar-light bg-light" style={{height: '50px'}}>
+          <img src={Logo} alt='logo' style={{height: '50px'}}/>
           <NavLink 
             to="/"
             className="navbar-brand" 
@@ -20,5 +20,5 @@ function Navigation() {
             >Create a Gaol</NavLink>
         </nav>
         )}
-        
+
 export default Navigation
