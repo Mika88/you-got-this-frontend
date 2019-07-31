@@ -6,6 +6,12 @@ function stepsReducer(state = [], action) {
         return action.steps
       case 'DELETE_STEP':
         return [...state.filter(step => step.id !== action.step.id)]
+      case 'UPDATE_STEP':
+        const step = state.find(step => step.id === action.step.id)
+        const index = state.indexOf(step)
+        const newState = [...state]
+          newState.splice(index, 1, action.step)
+        return newState
       default:
         return state;
       }
