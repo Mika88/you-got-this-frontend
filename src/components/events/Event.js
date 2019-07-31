@@ -33,7 +33,7 @@ class Event extends Component {
               onChange={(e) => this.handleCheckboxChange(e)}
             />
           <label className="d-inline-block">
-            <strong>{this.props.event.time}</strong>
+            {this.props.event.time}
           </label>
         </form>
         </div>

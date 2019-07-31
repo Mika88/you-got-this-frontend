@@ -25,16 +25,16 @@ class Step extends Component {
           X  </button> 
         </div>
         <div className="d-inline-block">
-        <form>
-            <input
-              type="checkbox"
-              checked={this.state.done}
-              onChange={(e) => this.handleCheckboxChange(e)}
-            />
-          <label className="d-inline-block">
-            <h4>~{this.props.step.text}</h4>
-          </label>
-        </form>
+          <form>
+              <input
+                type="checkbox"
+                checked={this.state.done}
+                onChange={(e) => this.handleCheckboxChange(e)}
+              />
+            <label className="d-inline-block">
+            <h4><strong>{this.props.step.text}</strong></h4>
+            </label>
+          </form>
         </div>
         <EventContainer step={this.props.step}/>
       </div>
