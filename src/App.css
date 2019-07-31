@@ -1,5 +1,5 @@
 .bg { 
-  background-image: url(./bg.jpg);
+  background-image: url(./images/bg.jpg);
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
@@ -43,4 +43,3 @@ padding-left: 20px;
   text-align: center;
   background-color : rgba(68, 212, 212, 0.7)
 }
-
