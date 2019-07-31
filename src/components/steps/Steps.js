@@ -12,7 +12,6 @@ function Steps(props){
     <ol>
         { steps.map(step => 
         <li key={step.id}>
-          <button onClick={() => deleteStep({text: step.text, goal_id: goalId}, step.id)}>X</button> 
           <Step step={step} goalId={goalId} deleteStep={deleteStep}/>
         </li>
         )}
@@ -21,3 +20,4 @@ function Steps(props){
   )
 }
 export default Steps
+
