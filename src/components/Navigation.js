@@ -2,8 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../logo.jpg'
 
-class Navigation extends React.Component {
-    render() {
+function Navigation() {
       return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <img src={Logo} alt='logo' />
@@ -21,6 +20,5 @@ class Navigation extends React.Component {
             >Create a Gaol</NavLink>
         </nav>
         )}
-    }
-
-    export default Navigation
+        
+export default Navigation
