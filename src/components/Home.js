@@ -13,8 +13,8 @@ function Home() {
                     <li>Create a goal</li>
                     <li>Click it</li>
                     <li>Add steps</li>
-                    <li>For each step create events</li>
-                    <li>Add them to your calendar (optional) and submit</li>
+                    <li>For each step you can create events</li>
+                    <li>Add events to your calendar (optional) and submit</li>
                     <li>Once you finish an event or a step check it off</li>
                     <li>and remember:</li>
                     <img src={Quote} alt='quote' style={{height:'100px'}}/>
