@@ -9,6 +9,12 @@ class Step extends Component {
       done: props.step.done
     }
   }
+
+  handleCheckboxChange(e){
+    this.setState({done: e.target.checked}, () => 
+      this.props.updateStep({done: this.state.done}, this.props.step.id) )
+  }
+
   render() {
     return (
       <div>
@@ -19,7 +25,16 @@ class Step extends Component {
           X  </button> 
         </div>
         <div className="d-inline-block">
-          <h4>{this.props.step.text}</h4>
+        <form>
+            <input
+              type="checkbox"
+              checked={this.state.done}
+              onChange={(e) => this.handleCheckboxChange(e)}
+            />
+          <label className="d-inline-block">
+            <h4>~{this.props.step.text}</h4>
+          </label>
+        </form>
         </div>
         <EventContainer step={this.props.step}/>
       </div>
