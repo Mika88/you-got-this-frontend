@@ -17,6 +17,10 @@ function Goal(props){
                     <h1>{deadlineTracker(goal.deadline)}</h1>
                 </div> : ""}
             </div>
+            <div className="about-goal">
+              <h4>About my goal:</h4>
+              <p>{goal.reason}</p>
+            </div>
             { goal.deadline ? 
                <strong>Deadline:  {deadlineFormat(goal.deadline)}</strong>
                : "" }

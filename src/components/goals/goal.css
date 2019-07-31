@@ -1,20 +1,30 @@
 .deadline-tracker {
     height: 100%;
-    width: 155px;
+    width: 100px;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: 10px;
     overflow-x: hidden;
   }
-   
+  .about-goal {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 120px;
+    right: 20px;
+    overflow-x: hidden;
+    text-align: center;
+    background-color : rgba(68, 212, 212, 0.7)
+  }
   .goal {
     position: static;
     bottom: 0;
     left: 30px;
     width: 700px;
     padding: 30px;
-    background-color : rgba(204, 229, 255, 0.7)
+    background-color : rgba(204, 229, 255, 0.7);
   }
 
   .goal-form {
