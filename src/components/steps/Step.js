@@ -4,11 +4,18 @@ import EventContainer from '../../containers/EventsContainer';
 function Step(props){
 
   const {step, deleteStep, goalId} = props
-  
+
   return (
-    <div>   
-      <button onClick={() => deleteStep({text: step.text, goal_id: goalId}, step.id)}>X</button> 
-      {step.text}  
+    <div>
+       <div className="d-inline-block">
+        <button 
+          className="btn-outline-primary btn-sm" 
+          onClick={() => deleteStep({text: step.text, goal_id: goalId}, step.id)}>
+         X  </button> 
+      </div>
+      <div className="d-inline-block">
+        <h4>~{step.text}~</h4>
+      </div>
       <EventContainer step={step}/>
     </div>
   )
