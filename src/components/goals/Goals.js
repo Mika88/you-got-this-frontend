@@ -12,7 +12,7 @@ function Goals(props){
           <button 
             className="btn-outline-primary btn-sm" 
             onClick={() => 
-              deleteGoal({text: goal.text, reason: goal.reason, deadline: goal.deadline}, goal.id)}
+              deleteGoal({text: goal.text, about: goal.about, deadline: goal.deadline}, goal.id)}
                >X</button>
           <strong><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
           <br /><br />

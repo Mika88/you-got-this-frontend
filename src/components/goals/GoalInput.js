@@ -4,7 +4,7 @@ import './goal.css'
 export default class GoalInput extends Component {
     state = {
         text: '',
-        reason: '',
+        about: '',
         deadline : '',
         redirect: false
     } 
@@ -32,14 +32,14 @@ export default class GoalInput extends Component {
       this.props.addGoal(this.state)
       this.setState({
           text: '',
-          reason: '',
+          about: '',
           deadline: ''
       })
       this.setRedirect()
     }
 
     render() {
-      const { text, reason, deadline } = this.state
+      const { text, about, deadline } = this.state
       return (
           <div className="goal-form">
             {this.renderRedirect()}
@@ -52,13 +52,13 @@ export default class GoalInput extends Component {
                 onChange={(event)=> this.handleOnChange(event)}
                 />
               <br/><br/>
-              <label>This Goal is Important to Me Because (optional) </label><br/>
+              <label>Tell us about your goal and why it is important to you: (optional) </label><br/>
               <textarea
                 type="text"
-                name="reason" 
+                name="about" 
                 cols="40"
                 rows="5"
-                value={reason} 
+                value={about} 
                 onChange={(event)=> this.handleOnChange(event)}
                 />
                <br/><br/>

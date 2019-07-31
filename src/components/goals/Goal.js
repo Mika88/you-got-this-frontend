@@ -19,7 +19,7 @@ function Goal(props){
             </div>
             <div className="about-goal">
               <h4>About my goal:</h4>
-              <p>{goal.reason}</p>
+              <p>{goal.about}</p>
             </div>
             { goal.deadline ? 
                <strong>Deadline:  {deadlineFormat(goal.deadline)}</strong>
