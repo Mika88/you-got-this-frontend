@@ -7,9 +7,7 @@ function Events(props){
 
     return (
       <div>
-        <ul>
-          { events.map(event=> <Event key={event.id} event={event} stepId={stepId} deleteEvent={deleteEvent} updateEvent={updateEvent} />) }
-        </ul>
+        { events.map(event=> <Event key={event.id} event={event} stepId={stepId} deleteEvent={deleteEvent} updateEvent={updateEvent} />) }
       </div>
     )
   }

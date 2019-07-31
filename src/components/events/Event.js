@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './event.css'
 
 class Event extends Component {
   
@@ -16,20 +17,25 @@ class Event extends Component {
   
   render() {    
     return (
-      <div>
-        <li key={this.props.event.id}>
+      <div className="event">
+         <div className="d-inline-block" >
+          <button
+            onClick={() => 
+              this.props.deleteEvent({time: this.props.event.time, step_id: this.props.stepId}, this.props.event.id)}
+              >X</button>
+        </div>
+        <div className="d-inline-block">
         <form>
             <input
               type="checkbox"
               checked={this.state.done}
               onChange={(e) => this.handleCheckboxChange(e)}
             />
-          <label>
+          <label className="d-inline-block">
             {this.props.event.time}
           </label>
         </form>
-        <button onClick={() => this.props.deleteEvent({time: this.props.event.time, step_id: this.props.stepId}, this.props.event.id)}>X</button>
-        </li>
+        </div>
       </div>
     )}
 }
