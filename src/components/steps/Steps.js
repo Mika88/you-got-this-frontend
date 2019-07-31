@@ -7,7 +7,7 @@ function Steps(props){
   const {steps, deleteStep, goalId} = props 
 
   return (
-  <div className="steps">
+  <div>
     <h2>{steps.length > 0 ? "Steps: " : ""}</h2>
     <ol>
         { steps.map(step => 

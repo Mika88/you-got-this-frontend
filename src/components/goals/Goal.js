@@ -8,15 +8,19 @@ function Goal(props){
     
     if(goal){
         return (
-        <div>
+        <div className="goal">
             <h1>{goal.text}</h1>
             <div className="deadline-tracker">
-                <strong>Days to deadline: </strong> 
-                <h1>{deadlineTracker(goal.deadline)}</h1>
+              {goal.deadline ? 
+                <div>
+                    <strong>Days to deadline: </strong> 
+                    <h1>{deadlineTracker(goal.deadline)}</h1>
+                </div> : ""}
             </div>
-            <strong>{ goal.reason ? "This is important to me because " : ""} {goal.reason}</strong>
-            <h4>{ goal.deadline ? "Deadline: " : ""} {deadlineFormat(goal.deadline)}</h4>
-            
+            { goal.deadline ? 
+               <strong>Deadline:  {deadlineFormat(goal.deadline)}</strong>
+               : "" }
+            <br /><br />
             <StepsContainer goalId={goal.id}/>
         </div>
         )
