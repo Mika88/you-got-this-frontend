@@ -20,10 +20,13 @@ function Goal(props){
             <div className="about-goal">
               <h4>About my goal:</h4>
               <p>{goal.about}</p>
-            </div>
-            { goal.deadline ? 
-               <strong>Deadline:  {deadlineFormat(goal.deadline)}</strong>
+              { goal.deadline ? 
+              <div>
+                 <strong> Deadline:</strong> 
+                 <p>{deadlineFormat(goal.deadline)}</p>
+               </div>
                : "" }
+            </div>
             <br /><br />
             <StepsContainer goalId={goal.id}/>
         </div>
