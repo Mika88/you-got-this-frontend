@@ -7,3 +7,12 @@
     left: 0;
     overflow-x: hidden;
   }
+
+  .goal-form {
+    position: static;
+    bottom: 0;
+    left: 30px;
+    width: 600px;
+    padding: 30px;
+    background-color : rgba(204, 229, 255, 0.7)
+  }

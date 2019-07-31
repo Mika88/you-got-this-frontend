@@ -1,9 +1,7 @@
 import React from 'react';
 import EventContainer from '../../containers/EventsContainer';
 
-function Step(props){
-
-  const {step, goalId, deleteStep} = props
+function Step({step}){
   return (
     <div>   
       {step.text}  

@@ -21,7 +21,7 @@ class StepsContainer extends Component {
     return (
       <div>
         <StepInput addStep={this.props.addStep} goalId={this.props.goalId}/>
-        <hr />
+        <br /><br />
         <Steps steps={associatedSteps} goalId={this.props.goalId} deleteStep={this.props.deleteStep}/>
       </div>
     )
