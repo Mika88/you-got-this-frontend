@@ -14,8 +14,7 @@ function Home() {
                     <li>Click it</li>
                     <li>Add steps</li>
                     <li>For each step create events</li>
-                    <li>Add it to your calendar (optional)</li>
-                    <li>Submit it</li>
+                    <li>Add them to your calendar (optional) and submit</li>
                     <li>Once you finished an event check it off</li>
                     <li>and remember:</li>
                     <img src={Quote} alt='quote' style={{height:'100px'}}/>
