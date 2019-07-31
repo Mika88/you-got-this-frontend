@@ -45,7 +45,7 @@ export default class GoalInput extends Component {
           <div className="component">
             {this.renderRedirect()}
             <form onSubmit={(event) => this.handleOnSubmit(event)}>
-              <label>My Goal: </label>
+              <label>My Goal:</label>
               <input
                 type="text" 
                 name="text" 
@@ -53,7 +53,7 @@ export default class GoalInput extends Component {
                 onChange={(event)=> this.handleOnChange(event)}
                 />
               <br/><br/>
-              <label>Tell us about your goal and why it is important to you: (optional) </label><br/>
+              <label>Tell us about your goal and why is it important to you (optional)</label><br/>
               <textarea
                 type="text"
                 name="about" 
