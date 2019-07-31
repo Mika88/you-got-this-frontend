@@ -4,7 +4,7 @@ import '../../App.css'
 
 function Steps(props){
 
-  const {steps, deleteStep, goalId} = props 
+  const {steps, deleteStep, goalId, updateStep} = props 
 
   return (
   <div>
@@ -12,7 +12,7 @@ function Steps(props){
       <ol>
         { steps.map(step =>
           <li key={step.id}>
-            <Step step={step} goalId={goalId} deleteStep={deleteStep}/>
+            <Step step={step} goalId={goalId} deleteStep={deleteStep} updateStep={updateStep}/>
           </li>
         )}
       </ol>

@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import EventContainer from '../../containers/EventsContainer';
 
-function Step(props){
+class Step extends Component {
 
-  const {step, deleteStep, goalId} = props
-
-  return (
-    <div>
-       <div className="d-inline-block">
-        <button 
-          className="btn btn-link btn-lg" 
-          onClick={() => deleteStep({text: step.text, goal_id: goalId}, step.id)}>
-         X  </button> 
+  constructor(props){
+    super(props)
+    this.state = {
+      done: props.step.done
+    }
+  }
+  render() {
+    return (
+      <div>
+        <div className="d-inline-block">
+          <button 
+            className="btn btn-link btn-lg" 
+            onClick={() => this.props.deleteStep({text: this.props.step.text, goal_id: this.props.goalId}, this.props.step.id)}>
+          X  </button> 
+        </div>
+        <div className="d-inline-block">
+          <h4>{this.props.step.text}</h4>
+        </div>
+        <EventContainer step={this.props.step}/>
       </div>
-      <div className="d-inline-block">
-        <h4>{step.text}</h4>
-      </div>
-      <EventContainer step={step}/>
-    </div>
-  )
+    )
+  }
 }
 export default Step;
