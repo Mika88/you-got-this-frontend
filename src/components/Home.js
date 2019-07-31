@@ -15,7 +15,7 @@ function Home() {
                     <li>Add steps</li>
                     <li>For each step create events</li>
                     <li>Add them to your calendar (optional) and submit</li>
-                    <li>Once you finis an event or a step check it off</li>
+                    <li>Once you finish an event or a step check it off</li>
                     <li>and remember:</li>
                     <img src={Quote} alt='quote' style={{height:'100px'}}/>
                 </ol>

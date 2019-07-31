@@ -17,7 +17,7 @@ function Navigation() {
           <NavLink 
             to="/goals/new"
             className="navbar-brand" 
-            >Create a Gaol</NavLink>
+            >Create a Goal</NavLink>
         </nav>
         )}
 
