@@ -9,12 +9,12 @@ function Step(props){
     <div>
        <div className="d-inline-block">
         <button 
-          className="btn-outline-primary btn-sm" 
+          className="btn btn-link btn-lg" 
           onClick={() => deleteStep({text: step.text, goal_id: goalId}, step.id)}>
          X  </button> 
       </div>
       <div className="d-inline-block">
-        <h4>~{step.text}~</h4>
+        <h4>{step.text}</h4>
       </div>
       <EventContainer step={step}/>
     </div>

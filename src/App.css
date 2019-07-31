@@ -1,42 +1,46 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .bg { 
   background-image: url(./bg.jpg);
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.component {
+    position: static;
+    bottom: 0;
+    left: 30px;
+    width: 700px;
+    padding: 30px;
+    background-color : rgba(204, 229, 255, 0.7);
+}
+
+.react-add-to-calendar__dropdown {
+  z-index:10;
+}
+
+.event{
+padding-left: 20px;
+}
+
+.deadline-tracker {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 10px;
+  overflow-x: hidden;
+}
+.about-goal {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 120px;
+  right: 20px;
+  overflow-x: hidden;
+  text-align: center;
+  background-color : rgba(68, 212, 212, 0.7)
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import StepsContainer from '../../containers/StepsContainer';
-import './goal.css'
+import '../../App.css'
 
 function Goal(props){
 
@@ -32,7 +32,7 @@ function Goal(props){
         }
 
         return (
-            <div className="goal">
+            <div className="component">
                 <h1>{goal.text}</h1>  
                 {isAbout()}
                 <br /><br />

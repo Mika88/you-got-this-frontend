@@ -2,6 +2,7 @@ import React from 'react';
 import GoalsContainer from './containers/GoalsContainer';
 import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import Home from './components/Home';
 import './App.css';
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
          <Navigation/>
          <br /><br />
         <Route path="/goals" render={routerProps => <GoalsContainer {...routerProps}/>}/>
-        <Route exact path="/" render={() => <h1>Home</h1>}/>
+        <Route exact path="/" component={Home}/>
       </div>
     </div>
     );

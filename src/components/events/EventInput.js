@@ -3,7 +3,7 @@ import DateTimePicker from 'react-datetime-picker';
 import AddToCalendar from 'react-add-to-calendar';
 import moment from 'moment'
 import 'react-add-to-calendar/dist/react-add-to-calendar.css';
-import './event.css';
+import '../../App.css'
 
 export default class EventInput extends Component {
     state={

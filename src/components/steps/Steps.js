@@ -1,6 +1,6 @@
 import React from 'react';
 import Step from './Step';
-import './steps.css'
+import '../../App.css'
 
 function Steps(props){
 

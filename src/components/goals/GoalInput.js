@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
-import './goal.css'
+import { Redirect } from 'react-router-dom';
+import '../../App.css';
+
 export default class GoalInput extends Component {
     state = {
         text: '',
@@ -41,7 +42,7 @@ export default class GoalInput extends Component {
     render() {
       const { text, about, deadline } = this.state
       return (
-          <div className="goal-form">
+          <div className="component">
             {this.renderRedirect()}
             <form onSubmit={(event) => this.handleOnSubmit(event)}>
               <label>My Goal: </label>

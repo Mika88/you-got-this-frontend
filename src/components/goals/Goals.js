@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../App.css';
 
 function Goals(props){
 
   const {goals, match, deleteGoal} = props
 
   return (
-    <div className="goals">
+    <div className="component">
         { goals.map(goal => 
         <div>
            <div className="d-inline-block">
