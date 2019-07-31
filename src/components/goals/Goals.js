@@ -9,13 +9,17 @@ function Goals(props){
     <div className="goals">
         { goals.map(goal => 
         <div>
-          <button 
-            className="btn-outline-primary btn-sm" 
-            onClick={() => 
-              deleteGoal({text: goal.text, about: goal.about, deadline: goal.deadline}, goal.id)}
-               >X</button>
-          <strong><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></strong>
-          <br /><br />
+           <div className="d-inline-block">
+              <button 
+                className="btn btn-link btn-xs" 
+                onClick={() => 
+                  deleteGoal({text: goal.text, about: goal.about, deadline: goal.deadline}, goal.id)}>X
+              </button>
+           </div>
+           <div className="d-inline-block">
+              <h4><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></h4>
+           </div>
+           <br /><br />
         </div>
       )}
   </div>

@@ -20,6 +20,7 @@ class Event extends Component {
       <div className="event">
          <div className="d-inline-block" >
           <button
+            className="btn btn-link btn-xs" 
             onClick={() => 
               this.props.deleteEvent({time: this.props.event.time, step_id: this.props.stepId}, this.props.event.id)}
               >X</button>
@@ -32,7 +33,7 @@ class Event extends Component {
               onChange={(e) => this.handleCheckboxChange(e)}
             />
           <label className="d-inline-block">
-            {this.props.event.time}
+            <strong>{this.props.event.time}</strong>
           </label>
         </form>
         </div>
