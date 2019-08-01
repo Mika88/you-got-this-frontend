@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import '../../App.css';
 
 function Goals(props){
-
+  
   const {goals, match, deleteGoal} = props
-
+  console.log(goals)
+  if(goals.length > 0){
   return (
     <div className="component">
         { goals.map(goal => 
@@ -22,9 +23,17 @@ function Goals(props){
            </div>
            <br /><br />
         </div>
-      )}
-  </div>
-  )
+        )}
+    </div>
+   )
+  }else{
+    return(
+      <div className="component">
+        <h4>The 'My Goals' page is currently empty,</h4>
+        <h4>please add goals using the 'Create a Goal' button.</h4>
+      </div>
+    )
+  }
 }
 export default Goals
 
