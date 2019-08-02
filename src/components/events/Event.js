@@ -22,7 +22,7 @@ class Event extends Component {
           <button
             className="btn btn-link btn-xs" 
             onClick={() => 
-              { if (window.confirm('Are you sure you wish to delete this step?'))
+              { if (window.confirm('Are you sure you wish to delete this event?'))
               this.props.deleteEvent({time: this.props.event.time, step_id: this.props.stepId}, this.props.event.id)}
               }>X
             </button>

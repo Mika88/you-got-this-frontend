@@ -5,13 +5,13 @@ export default class StepInput extends Component {
         text: ''
     }
     
-    handleOnChange(event){
+    handleOnChange = event => {
       this.setState({
         text: event.target.value,
       })
     }
     
-    handleOnSubmit(event){
+    handleOnSubmit = event => {
       event.preventDefault();
       this.props.addStep({text: this.state.text, goal_id: this.props.goalId});
       this.setState({
@@ -22,12 +22,12 @@ export default class StepInput extends Component {
     render() {
         return (
             <div>
-              <form onSubmit={(event) => this.handleOnSubmit(event)}>
+              <form onSubmit={event => this.handleOnSubmit(event)}>
                 <label>Add a step </label>
                 <input 
                   type="text" 
                   value={this.state.text} 
-                  onChange={(event)=> this.handleOnChange(event)}
+                  onChange={event => this.handleOnChange(event)}
                   />
                 <input 
                   type="submit" 

@@ -30,7 +30,7 @@ export default class EventInput extends Component {
       }
      })  
     
-     handleSubmit(event){
+     handleSubmit = event => {
       event.preventDefault();
       this.props.addEvent({time: this.eventTimeFormat(), step_id: this.props.step.id})
       this.setState({
@@ -47,7 +47,7 @@ export default class EventInput extends Component {
         let icon = { 'calendar-plus-o': 'left' };
         return (
           <div>
-            <form onSubmit={(event) => this.handleSubmit(event)}>
+            <form onSubmit={event => this.handleSubmit(event)}>
               <DateTimePicker
                 onChange={this.onChange}
                 value={this.state.date}
