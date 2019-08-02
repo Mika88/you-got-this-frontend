@@ -9,14 +9,16 @@ function Goals(props){
   if(goals.length > 0){
     return (
       <div className="component">
-          { goals.map(goal => 
-          <div key={goal.id}>
+          { goals.map((goal, index) => 
+          <div key={index}>
             <div className="d-inline-block">
+              <div className="delete-button">
                 <button 
                   className="btn btn-link btn-xs" 
                   onClick={() => 
-                    deleteGoal({text: goal.text, about: goal.about, deadline: goal.deadline}, goal.id)}>X
+                    { if (window.confirm('Are you sure you wish to delete this goal?'))  deleteGoal({text: goal.text, about: goal.about, deadline: goal.deadline}, goal.id)}}>X
                 </button>
+                </div>
             </div>
             <div className="d-inline-block">
                 <h4><Link to={`${match.url}/${goal.id}`}> {goal.text}</Link></h4>
@@ -24,6 +26,13 @@ function Goals(props){
             <br /><br />
           </div>
           )}
+           <button
+      onClick={() => {
+        alert.show('Oh look, an alert!')
+      }}
+    >
+      Show Alert
+    </button>
       </div>
     )
   }else{

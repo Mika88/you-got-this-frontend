@@ -18,7 +18,9 @@ export function addGoal(data) {
       body: JSON.stringify(data) 
     })
     .then(res => res.json())
-    .then(goal => dispatch({ type: 'ADD_GOAL', goal}))
+    
+    .then(goal => !goal.errors ? dispatch({ type: 'ADD_GOAL', goal }) : console.log(goal.errors))
+    
   } 
 }
 

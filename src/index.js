@@ -8,7 +8,16 @@ import rootReducer from './reducers/index';
 import thunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
 
+const options = {
+  position: positions.BOTTOM_CENTER,
+  timeout: 5000,
+  offset: '30px',
+  transition: transitions.SCALE
+}
+ 
 let store = createStore(
     rootReducer,
     compose(
@@ -20,7 +29,9 @@ let store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App/>
+      <AlertProvider template={AlertTemplate} {...options}>
+        <App/>
+      </AlertProvider>
     </BrowserRouter>
   </Provider>, 
   
