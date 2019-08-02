@@ -26,13 +26,6 @@ function Goals(props){
             <br /><br />
           </div>
           )}
-           <button
-      onClick={() => {
-        alert.show('Oh look, an alert!')
-      }}
-    >
-      Show Alert
-    </button>
       </div>
     )
   }else{

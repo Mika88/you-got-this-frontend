@@ -18,7 +18,7 @@ export function addStep(data) {
       body: JSON.stringify(data) 
     })
     .then(res => res.json())
-    .then(step => dispatch({type: 'ADD_STEP', step}))
+    .then(step => !step.errors ? dispatch({type: 'ADD_STEP', step}) : alert("A step must have a title"))
   } 
 }
 
@@ -44,6 +44,6 @@ export function updateStep(data, id) {
       body: JSON.stringify(data) 
     })
     .then(res => res.json())
-    .then(step =>  dispatch({type: 'UPDATE_STEP', step}))
+    .then(step => dispatch({type: 'UPDATE_STEP', step}))
   } 
 }

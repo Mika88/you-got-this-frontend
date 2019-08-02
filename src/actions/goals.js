@@ -1,3 +1,4 @@
+
 const apiUrl = 'http://localhost:3001/api/v1/goals'
 
 export function fetchGoals() {
@@ -19,7 +20,7 @@ export function addGoal(data) {
     })
     .then(res => res.json())
     
-    .then(goal => !goal.errors ? dispatch({ type: 'ADD_GOAL', goal }) : console.log(goal.errors))
+    .then(goal => !goal.errors ? dispatch({ type: 'ADD_GOAL', goal }) :  alert("A goal must have a title"))
     
   } 
 }
