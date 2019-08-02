@@ -21,8 +21,11 @@ class Step extends Component {
         <div className="d-inline-block">
           <button 
             className="btn btn-link btn-lg" 
-            onClick={() => this.props.deleteStep({text: this.props.step.text, goal_id: this.props.goalId}, this.props.step.id)}>
-          X  </button> 
+            onClick={() => 
+            { if (window.confirm('Are you sure you wish to delete this step?')) 
+              this.props.deleteStep({text: this.props.step.text, goal_id: this.props.goalId}, this.props.step.id)}
+              }>X
+          </button> 
         </div>
         <div className="d-inline-block">
           <form>
