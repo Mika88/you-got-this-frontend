@@ -15,6 +15,10 @@ class Event extends Component {
       this.props.updateEvent({done: this.state.done}, this.props.event.id) )
   }
   
+  handleAddEvents(){
+    this.setState({addEvent: !this.state.addEvent})
+  }
+
   render() {    
     return (
       <div className="event">

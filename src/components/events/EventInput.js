@@ -14,7 +14,8 @@ export default class EventInput extends Component {
             location: '',
             startTime: new Date(),
             endTime: new Date()
-          }
+          },
+        showPicker : false
     }
     
     eventTimeFormat(){
@@ -42,11 +43,17 @@ export default class EventInput extends Component {
         }
       })
     }
+    
+    handleShowPicker(){
+      this.setState({showPicker: !this.state.showPicker})
+    }
 
     render() {
         let icon = { 'calendar-plus-o': 'left' };
         return (
           <div>
+            <button className="btn btn-link btn-lg" onClick={()=> this.handleShowPicker()}>Add an Event</button>
+            {this.state.showPicker ? 
             <form onSubmit={event => this.handleSubmit(event)}>
               <DateTimePicker
                 onChange={this.onChange}
@@ -58,6 +65,8 @@ export default class EventInput extends Component {
                 />
                <input type="submit" value="submit"/>
             </form>
+              : null
+             }
           </div>
         )
     }
