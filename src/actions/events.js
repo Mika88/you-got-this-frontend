@@ -18,7 +18,7 @@ export function addEvent(data) {
         body: JSON.stringify(data) 
       })
       .then(res => res.json())
-      .then(event => dispatch({type: 'ADD_EVENT', event}))
+      .then(event => !event.errors ? dispatch({type: 'ADD_EVENT', event}) : alert(event.errors.message))
     } 
   }
 

@@ -19,8 +19,7 @@ export function addGoal(data) {
       body: JSON.stringify(data) 
     })
     .then(res => res.json(data))
-    .then(goal => !goal.errors ? dispatch({type: 'ADD_GOAL', goal}) : alert("A goal must have a title"))
-    
+    .then(goal => !goal.errors ? dispatch({type: 'ADD_GOAL', goal}) : alert(goal.errors.message))
   } 
 }
 

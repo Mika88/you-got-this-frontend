@@ -18,7 +18,7 @@ export function addStep(data) {
       body: JSON.stringify(data) 
     })
     .then(res => res.json())
-    .then(step => !step.errors ? dispatch({type: 'ADD_STEP', step}) : alert("A step must have a title"))
+    .then(step => !step.errors ? dispatch({type: 'ADD_STEP', step}) : alert(step.errors.message))
   } 
 }
 
