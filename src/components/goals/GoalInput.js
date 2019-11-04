@@ -30,7 +30,7 @@ export default class GoalInput extends Component {
     
     handleOnSubmit = event => {
       event.preventDefault();
-      this.props.addGoal(this.state)
+      this.props.addGoal({text: this.state.text, about: this.state.about, deadline: this.state.deadline, user_id: 1})
       this.setState({
           text: '',
           about: '',
