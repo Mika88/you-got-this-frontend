@@ -15,7 +15,7 @@ class GoalsContainer extends Component {
   deadlineTracker(deadline) {
     let today = moment();
     let endDay = moment(deadline);
-    return  endDay.diff(today, 'days')+1
+    return  endDay.diff(today, 'days')+1 > 0 ? endDay.diff(today, 'days')+1 : 0;
   }
   
   deadlineFormat(deadline) {
